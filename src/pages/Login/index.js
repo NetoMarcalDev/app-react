@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link  } from 'react-router-dom';
 import { 
   Form, 
   FormGroup, 
@@ -7,9 +6,8 @@ import {
   Input, 
   Button,
   Alert,
-  UncontrolledTooltip } from 'reactstrap';
-
-import Header from '../../components/Header';
+  UncontrolledTooltip,
+  Badge } from 'reactstrap';
 
 export default class Login extends Component {
   
@@ -75,6 +73,7 @@ export default class Login extends Component {
         body: JSON.stringify(data),
         headers: new Headers({
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         }),
       };
   
@@ -120,7 +119,11 @@ export default class Login extends Component {
           </FormGroup>
           <Button color='primary' block onClick={this.signIn}>Entrar</Button>
           <div>
-            <p><span style={{textDecoration: "underline", color:"blue"}} id="toolTopCadastro"><Link to='/cadastro'>Cadastrar</Link></span>.</p>
+            <p>
+              <span id="toolTopCadastro"> 
+                <Badge className='cadastrese' href="/cadastro" color="light"  >Cadastre-se aqui.</Badge >
+              </span>
+            </p>
             <UncontrolledTooltip placement="right" target="toolTopCadastro">
               Cadastra o Usuário para acesso ao Sitema.
             </UncontrolledTooltip>                    

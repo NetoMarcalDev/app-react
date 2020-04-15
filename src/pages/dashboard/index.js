@@ -5,10 +5,6 @@ import Header from '../../components/Header';
 
 export default class Dashboard extends Component {
   
-constructor(){
-  super();  
-}
-
   componentDidMount(){
 
     fetch('http://localhost:3000/produtos')
