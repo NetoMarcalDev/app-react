@@ -102,7 +102,7 @@ export default class Login extends Component {
   render(){
     return(
       <div className='col-md-3'>
-        <Header title='ReactJS Login' />
+        <h3>Login</h3>
         <hr className='my-3' />
         {
           this.state.message !==''? (
@@ -120,9 +120,9 @@ export default class Login extends Component {
           </FormGroup>
           <Button color='primary' block onClick={this.signIn}>Entrar</Button>
           <div>
-          <p><span style={{textDecoration: "underline", color:"blue"}} id="toolTopCadastro"><Link to='/register'>Cadastrar</Link></span>.</p>
+            <p><span style={{textDecoration: "underline", color:"blue"}} id="toolTopCadastro"><Link to='/cadastro'>Cadastrar</Link></span>.</p>
             <UncontrolledTooltip placement="right" target="toolTopCadastro">
-              Se cadastra como um novo Usuário no Sitema.
+              Cadastra o Usuário para acesso ao Sitema.
             </UncontrolledTooltip>                    
           </div>
         </Form>        
